@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true">
+  <div id="logo">
+    <img
+      src="https://lh6.googleusercontent.com/GMq5Xd_j1xmzDHWY2n8sSB8JZ_GeXr9V36RwmhTAfPAk2ZgLF7gHoN40C_8epcKABkBUdjnnlUXA2Pmkitc38hFGCX8Tck3NvtBh8PFL6l5KIPmpB7vgVoi2m9_urJSHeLY1XvfI"
+    />
+  </div>
+
+  <ion-textarea id="ema" class="input" placeholder="Email:"></ion-textarea>
+  <ion-textarea class="input" placeholder="Password:"></ion-textarea>
+
+  <ion-button id="button" expand="block" color="primary">Login</ion-button>
+  <ion-label class="text" id="account"> Need an Account?</ion-label>
+  <ion-label class="text" id="link" [routerLink]="['login']">
+    Sign Up</ion-label>
+
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header [translucent]="true"> </ion-header>
+<ion-content class="ion-padding">
+  <div id="rectangle"></div>
+  <img
+    id="back"
+    src="https://lh4.googleusercontent.com/J_ryNPLgttOZ-CMOvROu9JMhB1EfgE9SfrKtiVpPba2zVW11oSfQfpM1n1Ql4P8RJDnJkbHlI5qpjg163jKNdWvkYoB9jic_C4YSZQqSIHIta3lDiJS28vnWpinR-rctdpWFSBi6"
+    (click)="back()"
+  />
+  <img id="cart" src="{{icon}}" [routerLink]="['cart']" />
+
+  <img
+    id="avatar"
+    src="https://lh5.googleusercontent.com/wVAXam3YAHgpFCwH5JeRrU_y3i2LYGA7fFdwdfDWkVd7Lirt14UQn7jQL1LOiGonCvvqUYhk25m7dpMIy1XFgqYHUrrh-U3n8htuYYOTu0_s0m5WyJameKY6xXc_EuCGC57-vxwg"
+  />
+  <ion-label class="text" id="name"> Delighten Dee</ion-label>
+  <ion-label class="text"> Based in San Jose</ion-label>
+
+  <img id="star" src="https://i.ibb.co/bXHcQF4/Group-1.png" />
+  <ion-segment [(ngModel)]="type" (ionChange)="segmentChanged($event)" id="segmen">
+    <ion-segment-button value="Selling">
+      <ion-label class="lab">Selling</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="Posts">
+      <ion-label class="lab">Posts</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="type">
+    <ion-list *ngSwitchCase="'Posts'">
+      <img
+        class="posts"
+        src="https://lh4.googleusercontent.com/uEzHMaYMn7sopLIppYVY--BuYGJ9bEW3P4ag8Z0ZhTDmVsMVP_osURzC6qDKtA2Miu-Z1WIUrdu_zM3cBCUvD22jJg0lIP5XCRtOFDGU-nHbwKGxEEWd83s-79GGXq0NliLQvztQ"
+      />
+      <img
+        class="posts"
+        src="https://lh3.googleusercontent.com/b4tz2uKdK7_5hSHC7Lg5YeGohEOZ_p2TXtcT9ajepwD8xny5liB16Bu5KSY-o3kbf9coS4BVBwiT_nPMvexmjMDZwz5jVHgoWsW3JOLroAd20oobX6Dogi4G02_adQMf_TpL7x0-"
+      />
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Selling'">
+      <img
+        class="pic"
+        src="https://lh3.googleusercontent.com/GjqYFbLYwKoeFT6usmzSEPkwoqaSLQlXAD_LLQj4hLR3-8LFhXMIdld8YiIo9-ocylz_icHFc-HLCnLogpsyhkMzV2E4TUgRUOvp35HotUE62LqqMZEXcORSggOQzIXIbG8Vmp_g"
+      />
+      <img
+        class="pic"
+        src="https://lh4.googleusercontent.com/uc8KfozswXfbYrQnX-bt0iBB9LHvJfK1wDPYfEGIjVQmmTkhRF9UrmQTDjuj9Pi68oOTVjs1XjKZ_knrOGoPno0atiJZdcW6jqmIVV_jtjTTzJaZkbqC3Pea1xJALOxUCD1d5ucj"
+        (click)="change()"
+
+      />
+      <img
+        class="pic"
+        src="https://lh4.googleusercontent.com/Ia2bSHnsMrbJ95FJmlnt1b8L1_-I9WS0vFTxA8t8J9wYknpUnHvbgSpcwz5wVZr9sxkLKHtQlsOH_squyHJASppPVb52nMqKv0lxgszN2OHl9Lht_4Ljn11XCNfjdX5RNlW25Wg1"
+      />
+    </ion-list>
+  </div>
+</ion-content>

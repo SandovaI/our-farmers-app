@@ -1,0 +1,106 @@
+ion-content {
+  --ion-background-color: #ffebeb;
+}
+
+#avatar {
+  position: relative;
+  display: block;
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 160px !important; //any size
+  max-height: 160px !important;
+  margin-bottom: -10px;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #d91919;
+  margin-bottom: 10px;
+}
+#name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #d91919;
+}
+
+#cart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+#back {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+#star {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+#rectangle {
+  background-color: #d91919;
+  width: 120%;
+  height: 35%;
+  z-index: -100;
+  margin: -30px;
+  margin-bottom: -115px;
+}
+.posts {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+}
+.pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-segment {
+  --background: #f3f3f3;
+}
+
+#segmen {
+  margin-left: 22px;
+  border-radius: 30px;
+  width: 300px;
+  margin-bottom: 15px;
+}
+ion-segment-button {
+  --background-checked: white;
+  --background-hover: white;
+  --color-checked: #d91919;
+  --indicator-box-shadow: none;
+  --indicator-color: white;
+}
+
+.lab {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}

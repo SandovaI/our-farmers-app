@@ -1,0 +1,43 @@
+<ion-content>
+  <img
+    id="back"
+    src="https://lh4.googleusercontent.com/kA2zahKHGnt3oFNqYAZ0gAZAtbGAu6B_1ZxHlMt0hMYGQYtUXiZ5VW5BBqZIELBMtnvwAKjm5Qq6QYMIhjFjQXxe_-J21sYlZKg8UAEuJjLk6eXN4anDzbhpLAmbEiMxiHlJA-6A"
+  />
+  <br />
+  <ion-segment
+    id="segmen"
+    [(ngModel)]="type"
+    (ionChange)="segmentChanged($event)"
+    scrollable
+  >
+    <ion-segment-button class="lab" value="Delivery" checked>
+      <ion-label>Delivery</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Pickup" class="lab">
+      <ion-label>Pickup</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="type">
+    <ion-list *ngSwitchCase="'Delivery'">
+      <img src="https://i.ibb.co/vHPK9GH/Screenshot-2021-08-12-151205.jpg" />
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Pickup'">
+      <img
+        src="https://lh6.googleusercontent.com/KgoB32xMBAJPjoqmSI89QEpxsJZ53TPQTz-Xi9mWHO7b5ytK73Ca2UPgEyB2HsvyNmtaU6KhRyiBzqMBTKuSfS-u-7DCoo7y0svdngnAZxvLD5q9jCysdUDIyLT6XthaIlYSnVL8"
+      />
+
+      <img
+        id="pick"
+        src="https://i.ibb.co/vHPK9GH/Screenshot-2021-08-12-151205.jpg"
+      />
+    </ion-list>
+  </div>
+
+  <img
+    id="button"
+    (click)="openModal()"
+    src="https://lh6.googleusercontent.com/1QBRx-9OlojzBOSIIIeuGcVG8Agdp6YranC3KQte6ZUVzK-_mgZjCXNoe1XcVZYx4i25KS89oCAFH-vjowehzWRMozzC3MQh81KDoSnZUEyodxAGoJezsZZuOUqmYL6nCfn9jUtQ"
+  />
+</ion-content>
