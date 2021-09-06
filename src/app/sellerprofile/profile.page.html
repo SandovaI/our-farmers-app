@@ -17,14 +17,13 @@
 
   <img id="star" src="https://i.ibb.co/bXHcQF4/Group-1.png" />
   <ion-segment [(ngModel)]="type" (ionChange)="segmentChanged($event)" id="segmen">
-    <ion-segment-button value="Posts">
-      <ion-label class="lab">Posts</ion-label>
-    </ion-segment-button>
     <ion-segment-button value="Selling">
       <ion-label class="lab">Selling</ion-label>
     </ion-segment-button>
 
-
+    <ion-segment-button value="Posts">
+      <ion-label class="lab">Posts</ion-label>
+    </ion-segment-button>
   </ion-segment>
 
   <div [ngSwitch]="type">

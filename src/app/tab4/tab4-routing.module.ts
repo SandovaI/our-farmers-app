@@ -6,6 +6,13 @@ const routes: Routes = [
   {
     path: '',
     component: Tab4Page
+  },
+  {
+    path: 'sellerprofile',
+    loadChildren: () =>
+      import('../sellerprofile/sellerprofile.module').then(
+        m => m.SellerProfilePageModule
+      )
   }
 ];
 
