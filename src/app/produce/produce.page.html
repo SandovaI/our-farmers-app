@@ -1,0 +1,51 @@
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        Produce Selection
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Vegetables</ion-label>
+      <ion-select multiple="true" cancelText="Cancel" okText="Save">
+        <ion-select-option value="1">Carrot</ion-select-option>
+        <ion-select-option value="2">Potatoe</ion-select-option>
+        <ion-select-option value="3">Brocolli</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fruit</ion-label>
+      <ion-select multiple="true" cancelText="Cancel" okText="Save">
+        <ion-select-option value="1">Strawberries</ion-select-option>
+        <ion-select-option value="2">Mangos</ion-select-option>
+        <ion-select-option value="3">Grapes</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dairy</ion-label>
+      <ion-select multiple="true" cancelText="Cancel" okText="Save">
+        <ion-select-option value="1">Milk</ion-select-option>
+        <ion-select-option value="2">Eggs</ion-select-option>
+        <ion-select-option value="3">Butter</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Grains</ion-label>
+      <ion-select multiple="true" cancelText="Cancel" okText="Save">
+        <ion-select-option value="1">Rice</ion-select-option>
+        <ion-select-option value="2">Bread</ion-select-option>
+        <ion-select-option value="3">Pasta</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+  <ion-button id="button" expand="block" color="primary" [routerLink]="['tab2']">CONTINUE</ion-button>
+
+</ion-content>
