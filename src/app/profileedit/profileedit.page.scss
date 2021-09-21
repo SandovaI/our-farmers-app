@@ -1,7 +1,11 @@
 ion-content {
   --ion-background-color: #ffebeb;
 }
-
+#edit {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
 #avatar {
   position: relative;
   display: block;
