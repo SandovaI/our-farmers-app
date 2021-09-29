@@ -25,6 +25,7 @@ export class ProfileEditPage {
     private router: Router,
     private camera: Camera,
     public actionSheetController: ActionSheetController,
+    
     private file: File
   ) {}
 
