@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-profileedit',
@@ -25,7 +26,7 @@ export class ProfileEditPage {
     private router: Router,
     private camera: Camera,
     public actionSheetController: ActionSheetController,
-    
+
     private file: File
   ) {}
 
