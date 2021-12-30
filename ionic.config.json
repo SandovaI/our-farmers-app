@@ -1,8 +1,5 @@
 {
-  "name": "ionic test",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular",
-  "id": "549827c1"
+  "name": "OurFarmers",
+  "integrations": {},
+  "type": "angular"
 }

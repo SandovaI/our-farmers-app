@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SellerProfilePage } from './sellerprofile.page';
-import { FruitsPage } from '../fruits/fruits.page';
-import { SeedsPage } from '../seeds/seeds.page';
-import { CartPage } from '..cart/cart.page';
 
 const routes: Routes = [
   {
@@ -12,10 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'edit',
-    loadChildren: () =>
-      import('../profileedit/profileedit.module').then(
-        m => m.ProfileEditPageModule
-      )
+    loadChildren: () => import('./editprofile/editprofile.module').then( m => m.EditprofilePageModule)
   }
 ];
 

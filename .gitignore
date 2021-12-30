@@ -29,3 +29,4 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+.angular/cache/angular-webpack/40d16ff8efd0bb2fcf695e28f92e8ed558ad45cb/0.pack

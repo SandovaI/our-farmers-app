@@ -5,7 +5,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { SellerProfilePage } from './sellerprofile.page';
 
 describe('sellerprofilePage', () => {
-  let component: ProfilePage;
+  let component: SellerProfilePage;
   let fixture: ComponentFixture<SellerProfilePage>;
 
   beforeEach(

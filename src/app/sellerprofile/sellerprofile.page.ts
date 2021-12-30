@@ -21,6 +21,9 @@ export class SellerProfilePage {
   back() {
     this.router.navigate(['/tabs/tab1/login/tab2']);
   }
+  next() {
+    this.router.navigate(['/tabs/tab4/sellerprofile/edit']);
+  }
 
   segmentChanged(ev: any) {
     console.log('Segment changed');

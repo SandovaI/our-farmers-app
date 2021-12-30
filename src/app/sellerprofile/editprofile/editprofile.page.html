@@ -11,12 +11,20 @@
     id="avatar"
     src="https://lh5.googleusercontent.com/wVAXam3YAHgpFCwH5JeRrU_y3i2LYGA7fFdwdfDWkVd7Lirt14UQn7jQL1LOiGonCvvqUYhk25m7dpMIy1XFgqYHUrrh-U3n8htuYYOTu0_s0m5WyJameKY6xXc_EuCGC57-vxwg"
   />
-  <img id = "edit" (click) = 'next()'src = "https://lh4.googleusercontent.com/E9w-1pPr_N910emjqDhehxMjZhPbEvjbzvjIeqSDvkLHePMlG_Ja8dwnjslQ51b_kkEBcA8kbMaaiYBz8iNOisl4QV7GnFZcxin7RKPd6wVn6rOtdOOzTwNToRh4_euoedUPmVAI=s0"/>
-  <ion-label class="text" id="name"> Delighten Dee</ion-label>
-  <ion-label class="text"> Based in San Jose</ion-label>
+  <ion-textarea
+    class="text"
+    placeholder="Delighten Dee"
+    id="name"
+  ></ion-textarea>
+  <ion-label class="text"> Based in:</ion-label>
+  <ion-textarea class="text" placeholder="San Jose" id="name"></ion-textarea>
 
-  <img id="star" src="https://i.ibb.co/bXHcQF4/Group-1.png" />
-  <ion-segment [(ngModel)]="type" (ionChange)="segmentChanged($event)" id="segmen">
+  <!-- <img id="star" src="https://i.ibb.co/bXHcQF4/Group-1.png" /> -->
+  <ion-segment
+    [(ngModel)]="type"
+    (ionChange)="segmentChanged($event)"
+    id="segmen"
+  >
     <ion-segment-button value="Selling">
       <ion-label class="lab">Selling</ion-label>
     </ion-segment-button>
@@ -41,17 +49,8 @@
     <ion-list *ngSwitchCase="'Selling'">
       <img
         class="pic"
-        src="https://lh3.googleusercontent.com/GjqYFbLYwKoeFT6usmzSEPkwoqaSLQlXAD_LLQj4hLR3-8LFhXMIdld8YiIo9-ocylz_icHFc-HLCnLogpsyhkMzV2E4TUgRUOvp35HotUE62LqqMZEXcORSggOQzIXIbG8Vmp_g"
-      />
-      <img
-        class="pic"
-        src="https://lh4.googleusercontent.com/uc8KfozswXfbYrQnX-bt0iBB9LHvJfK1wDPYfEGIjVQmmTkhRF9UrmQTDjuj9Pi68oOTVjs1XjKZ_knrOGoPno0atiJZdcW6jqmIVV_jtjTTzJaZkbqC3Pea1xJALOxUCD1d5ucj"
-        (click)="change()"
-
-      />
-      <img
-        class="pic"
-        src="https://lh4.googleusercontent.com/Ia2bSHnsMrbJ95FJmlnt1b8L1_-I9WS0vFTxA8t8J9wYknpUnHvbgSpcwz5wVZr9sxkLKHtQlsOH_squyHJASppPVb52nMqKv0lxgszN2OHl9Lht_4Ljn11XCNfjdX5RNlW25Wg1"
+        src="https://lh3.googleusercontent.com/PJu4EpQfyNnQGwbjbN7jsqklv15ngyeKAUvOnB68fXmWPdr67cO09Vggew6cgF9x4Ytu6L2W9bLCq9kcYvCklzJb-BRQJlBl3B7_K36-Jk8aYjb3CFQIEhOg6mqjflRPqKBMaV7l=s0"
+        (click)="pickImage()"
       />
     </ion-list>
   </div>
