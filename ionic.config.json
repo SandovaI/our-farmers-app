@@ -1,5 +1,7 @@
 {
-  "name": "OurFarmers",
-  "integrations": {},
+  "name":"OurFarmers",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
