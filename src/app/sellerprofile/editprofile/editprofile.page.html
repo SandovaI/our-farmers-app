@@ -1,6 +1,7 @@
-<ion-header [translucent]="true"> </ion-header>
+<!--<ion-header [translucent]="true"> </ion-header>
 <ion-content class="ion-padding">
   <div id="rectangle"></div>
+  
   <img
     id="back"
     src="https://lh4.googleusercontent.com/J_ryNPLgttOZ-CMOvROu9JMhB1EfgE9SfrKtiVpPba2zVW11oSfQfpM1n1Ql4P8RJDnJkbHlI5qpjg163jKNdWvkYoB9jic_C4YSZQqSIHIta3lDiJS28vnWpinR-rctdpWFSBi6"
@@ -11,6 +12,7 @@
     id="avatar"
     src="https://lh5.googleusercontent.com/wVAXam3YAHgpFCwH5JeRrU_y3i2LYGA7fFdwdfDWkVd7Lirt14UQn7jQL1LOiGonCvvqUYhk25m7dpMIy1XFgqYHUrrh-U3n8htuYYOTu0_s0m5WyJameKY6xXc_EuCGC57-vxwg"
   />
+  <ion-icon (click) = "photoService.addNewToGallery()"size = "large" color = "danger"name="add-circle-outline"></ion-icon>
   <ion-textarea
     class="text"
     placeholder="Delighten Dee"
@@ -19,7 +21,6 @@
   <ion-label class="text"> Based in:</ion-label>
   <ion-textarea class="text" placeholder="San Jose" id="name"></ion-textarea>
 
-  <!-- <img id="star" src="https://i.ibb.co/bXHcQF4/Group-1.png" /> -->
   <ion-segment
     [(ngModel)]="type"
     (ionChange)="segmentChanged($event)"
@@ -50,8 +51,39 @@
       <img
         class="pic"
         src="https://lh3.googleusercontent.com/PJu4EpQfyNnQGwbjbN7jsqklv15ngyeKAUvOnB68fXmWPdr67cO09Vggew6cgF9x4Ytu6L2W9bLCq9kcYvCklzJb-BRQJlBl3B7_K36-Jk8aYjb3CFQIEhOg6mqjflRPqKBMaV7l=s0"
-        (click)="pickImage()"
+        (click)="addPhotoToGallery()"
       />
+      
     </ion-list>
   </div>
+</ion-content>
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Photo Gallery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Photo Gallery</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+    <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+      <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)"></ion-img>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="photoService.addNewToGallery()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

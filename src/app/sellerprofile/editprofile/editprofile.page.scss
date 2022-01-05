@@ -18,7 +18,11 @@ ion-content {
     max-height: 160px !important;
     margin-bottom: -10px;
   }
-  
+  ion-icon{
+    position:absolute;
+    left: 220px;
+    top:230px;
+  }
   .text {
     display: flex;
     justify-content: center;
