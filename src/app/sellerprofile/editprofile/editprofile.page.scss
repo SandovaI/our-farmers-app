@@ -19,9 +19,25 @@ ion-content {
     margin-bottom: -10px;
   }
   ion-icon{
-    position:absolute;
-    left: 220px;
-    top:230px;
+    position:fixed;
+    left:220px;
+    top: 250px;
+   
+  }
+  #pic{
+    position: relative;
+    display: block;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 160px !important; //any size
+    max-height: 160px !important;
+    margin-bottom: -10px;
+    border-radius: 50%;
+    border: 3px solid white;
+
   }
   .text {
     display: flex;

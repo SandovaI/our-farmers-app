@@ -8,6 +8,7 @@ import { UserPhoto, PhotoService } from '../../services/photo.service';
   styleUrls: ['editprofile.page.scss']
 })
 export class EditprofilePage {
+  
 
   constructor(public photoService: PhotoService, public actionSheetController: ActionSheetController) {}
 
@@ -36,4 +37,5 @@ export class EditprofilePage {
     });
     await actionSheet.present();
   }
+ 
 }

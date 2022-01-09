@@ -1,4 +1,4 @@
-<!--<ion-header [translucent]="true"> </ion-header>
+<ion-header [translucent]="true"> </ion-header>
 <ion-content class="ion-padding">
   <div id="rectangle"></div>
   
@@ -8,10 +8,14 @@
     (click)="back()"
   />
 
-  <img
+  <!--<img
     id="avatar"
     src="https://lh5.googleusercontent.com/wVAXam3YAHgpFCwH5JeRrU_y3i2LYGA7fFdwdfDWkVd7Lirt14UQn7jQL1LOiGonCvvqUYhk25m7dpMIy1XFgqYHUrrh-U3n8htuYYOTu0_s0m5WyJameKY6xXc_EuCGC57-vxwg"
   />
+  -->
+  <ion-col size="1" *ngFor="let photo of photoService.photos; index as position">
+    <img id = "pic" [src]="photo.webviewPath" (click)="showActionSheet(photo, position)">
+  </ion-col>
   <ion-icon (click) = "photoService.addNewToGallery()"size = "large" color = "danger"name="add-circle-outline"></ion-icon>
   <ion-textarea
     class="text"
@@ -57,7 +61,8 @@
     </ion-list>
   </div>
 </ion-content>
--->
+
+<!--
 <ion-header>
   <ion-toolbar>
     <ion-title>
@@ -87,3 +92,4 @@
     </ion-fab-button>
   </ion-fab>
 </ion-content>
+-->
