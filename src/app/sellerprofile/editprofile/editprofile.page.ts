@@ -11,20 +11,25 @@ export class EditprofilePage {
   
 
   constructor(public photoService: PhotoService, public actionSheetController: ActionSheetController) {}
-
   async ngOnInit() {
     await this.photoService.loadSaved();
   }
-
+  async display(){
+    console.log(this.photoService.photos.length);
+    if (this.photoService.photos.length == 0){
+      return 'https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png'
+    }
+  }
   public async showActionSheet(photo: UserPhoto, position: number) {
     const actionSheet = await this.actionSheetController.create({
-      header: 'Photos',
+      header: 'Update Profile Picture',
       buttons: [{
-        text: 'Delete',
+        text: 'Upload',
         role: 'destructive',
-        icon: 'trash',
-        handler: () => {
-          this.photoService.deletePicture(photo, position);
+        icon: 'add-circle-outline',
+        handler: async () => {
+          this.photoService.addNewToGallery();
+          this.photoService.deletePicture(photo,position)
         }
       }, {
         text: 'Cancel',

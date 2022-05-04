@@ -14,9 +14,12 @@
   />
   -->
   <ion-col size="1" *ngFor="let photo of photoService.photos; index as position">
-    <img id = "pic" [src]="photo.webviewPath" (click)="showActionSheet(photo, position)">
+    <img id = "pic" [src]="photo.webviewPath" >
+    <ion-icon (click) = "showActionSheet(photo, position)"size = "large" color = "danger"name="add-circle-outline"></ion-icon>
+
   </ion-col>
-  <ion-icon (click) = "photoService.addNewToGallery()"size = "large" color = "danger"name="add-circle-outline"></ion-icon>
+  <ion-icon (click) = "showActionSheet(photo, position)"size = "large" color = "danger"name="add-circle-outline"></ion-icon>
+
   <ion-textarea
     class="text"
     placeholder="Delighten Dee"
